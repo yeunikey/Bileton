@@ -1,4 +1,4 @@
-package team.bileton;
+package team.bileton.starter;
 
 public interface Application {
 

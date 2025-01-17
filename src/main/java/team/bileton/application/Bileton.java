@@ -1,6 +1,6 @@
 package team.bileton.application;
 
-import team.bileton.Application;
+import team.bileton.starter.Application;
 
 public class Bileton implements Application {
 

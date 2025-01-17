@@ -1,4 +1,4 @@
-package team.bileton;
+package team.bileton.starter;
 
 import team.bileton.application.Bileton;
 
