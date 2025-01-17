@@ -1,0 +1,23 @@
+package team.bileton.application.models;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.io.File;
+
+@NoArgsConstructor
+@AllArgsConstructor
+
+@Getter
+@Setter
+public class Ticket {
+
+    private User user;
+    private Film film;
+
+    private int row;
+    private int col;
+
+}
