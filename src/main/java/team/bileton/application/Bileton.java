@@ -1,26 +1,21 @@
 package team.bileton.application;
 
+import lombok.Getter;
 import team.bileton.starter.Application;
 
+@Getter
 public class Bileton implements Application {
 
+    @Getter
     private static Bileton instance;
 
-    private Managers managers = new Managers();
+    private Services services = new Services();
 
     @Override
     public void onStart() {
         instance = this;
 
-        managers.setup();
-    }
-
-    public Managers getManagers() {
-        return managers;
-    }
-
-    public static Bileton getInstance() {
-        return instance;
+        services.setup();
     }
 
 }
