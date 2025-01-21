@@ -13,8 +13,5 @@ import lombok.Setter;
 public class Category {
 
     private String name;
-    private String description;
-    private String image;
-    private String category;
-    private int id;
+
 }
