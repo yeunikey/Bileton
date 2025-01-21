@@ -2,16 +2,28 @@ package team.bileton.application.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@NoArgsConstructor
 @AllArgsConstructor
-
 @Getter
-@Setter
-public class Category extends BObject {
+public enum Category {
 
-    private String name;
+    ALL("Все жанры"),
+    ACTION("Экшн"),
+    ADVENTURE("Приключения"),
+    COMEDY("Комедия"),
+    DRAMA("Драма"),
+    FANTASY("Фэнтези"),
+    HORROR("Ужасы"),
+    MYSTERY("Детектив"),
+    ROMANCE("Романтика"),
+    SCI_FI("Научная фантастика"),
+    THRILLER("Триллер"),
+    WESTERN("Вестерн"),
+    ANIMATION("Анимация"),
+    DOCUMENTARY("Документальный"),
+    CRIME("Криминал"),
+    FAMILY("Семейный"),
+    MUSIC("Музыка");
 
+    private final String name;
 }
