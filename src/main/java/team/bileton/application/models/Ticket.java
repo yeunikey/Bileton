@@ -5,14 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.File;
-
 @NoArgsConstructor
 @AllArgsConstructor
 
 @Getter
 @Setter
-public class Ticket {
+public class Ticket extends BObject {
 
     private User user;
     private Film film;

@@ -4,22 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import team.bileton.application.models.interfaces.Identifyable;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.UUID;
 
 @NoArgsConstructor
 @AllArgsConstructor
 
 @Getter
 @Setter
-public class Cinema extends BObject {
+public abstract class BObject implements Identifyable {
 
-    private String name;
-
-    private int rows;
-    private int cols;
-
-    private Map<String, Film> films = new HashMap<>();
+    private UUID uniqueId = generateId();
 
 }

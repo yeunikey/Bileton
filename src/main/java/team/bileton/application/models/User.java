@@ -13,7 +13,7 @@ import java.util.Map;
 
 @Getter
 @Setter
-public class User {
+public class User extends BObject {
 
     private String username;
     private String password;
