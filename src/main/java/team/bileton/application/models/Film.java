@@ -14,7 +14,7 @@ import java.util.Map;
 
 @Getter
 @Setter
-public class Film {
+public class Film extends BObject {
 
     private String name;
     private Category category;
