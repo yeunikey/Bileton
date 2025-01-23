@@ -21,6 +21,20 @@
             <version>1.18.36</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>me.xflyiwnl</groupId>
+            <artifactId>WiringAPI</artifactId>
+            <version>1.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/WiringAPI-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.6.0</version>
+        </dependency>
     </dependencies>
 
 </project>
