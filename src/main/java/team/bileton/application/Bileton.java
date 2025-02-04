@@ -11,14 +11,16 @@ public class Bileton implements Application {
     private static Bileton instance;
 
     private BiletonDatabase database = new BiletonDatabase();
-    private Services services = new Services();
+    private Services services;
 
     @Override
     public void onStart() {
         instance = this;
 
-        services.setup();
         database.connect();
+
+        services = new Services();
+        services.setup();
     }
 
 }
