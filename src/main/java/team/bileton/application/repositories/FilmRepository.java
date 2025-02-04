@@ -6,6 +6,7 @@ import team.bileton.application.repositories.interfaces.CrudRepositories;
 import java.util.List;
 
 public class FilmRepository implements CrudRepositories<Film, String> {
+
     @Override
     public Film findById(String s) {
         return null;
@@ -25,4 +26,5 @@ public class FilmRepository implements CrudRepositories<Film, String> {
     public void delete(String s) {
 
     }
+
 }

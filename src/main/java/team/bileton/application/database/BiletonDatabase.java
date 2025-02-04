@@ -1,11 +1,9 @@
 package team.bileton.application.database;
 
 import com.wiring.api.WiringAPI;
-import com.wiring.api.entity.column.Column;
-import team.bileton.application.database.interfaces.IDatabase;
+import lombok.Getter;
 
-import java.util.UUID;
-
+@Getter
 public class BiletonDatabase implements IDatabase {
 
     private WiringAPI wiringAPI;

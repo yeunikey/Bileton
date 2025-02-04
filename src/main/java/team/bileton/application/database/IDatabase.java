@@ -1,4 +1,4 @@
-package team.bileton.application.database.interfaces;
+package team.bileton.application.database;
 
 public interface IDatabase {
 
