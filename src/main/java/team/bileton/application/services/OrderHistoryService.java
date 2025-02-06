@@ -1,6 +1,6 @@
 package team.bileton.application.services;
 
-import com.yourprojectname.entity.OrderHistory;
+import com.team.bileton.application.entity.OrderHistory;
 import com.yourprojectname.repository.OrderHistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -2,7 +2,6 @@ package team.bileton.application.models;
 
 import java.time.LocalDateTime;
 
-@Table(name = "order_history")
 public class OrderHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
