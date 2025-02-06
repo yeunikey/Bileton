@@ -10,7 +10,7 @@ public class MainGUI extends JFrame implements GUI {
     @Override
     public void initialize() {
         setTitle("Biletone - Main GUI");
-        setSize(400, 300);
+        setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
