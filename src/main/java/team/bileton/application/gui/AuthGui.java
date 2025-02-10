@@ -4,8 +4,6 @@ import team.bileton.application.Bileton;
 import team.bileton.application.models.User;
 import team.bileton.application.services.UserService;
 
-import java.io.IOException;
-
 public class AuthGui extends BaseGui {
 
     private final UserService userService = getApp().getServices().getUserService();

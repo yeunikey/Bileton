@@ -1,17 +1,9 @@
 package team.bileton.application;
 
 import lombok.Getter;
-import lombok.Setter;
 import team.bileton.application.database.BiletonDatabase;
-import team.bileton.application.gui.AuthGui;
 import team.bileton.application.gui.interfaces.Gui;
-import team.bileton.application.models.Category;
-import team.bileton.application.models.Cinema;
-import team.bileton.application.models.Film;
-import team.bileton.application.models.User;
 import team.bileton.starter.Application;
-
-import java.time.LocalDateTime;
 
 @Getter
 public class Bileton implements Application {
@@ -23,8 +15,6 @@ public class Bileton implements Application {
     private Services services;
 
     private Gui currentGui;
-    @Setter
-    private User user;
 
     @Override
     public void onStart() {
@@ -32,10 +22,12 @@ public class Bileton implements Application {
 
         database.connect();
 
-        services = new Services(database.getWiringAPI());
+        services = new Services();
         services.setup();
 
-        enterGui(new AuthGui());
+        if (currentGui != null) {
+            currentGui.onEnter();
+        }
 
     }
 
