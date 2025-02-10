@@ -40,6 +40,24 @@ public class TicketRepository implements CrudRepositories<Ticket, String> {
             );
     }
 
+    public List<Ticket> findByFilm(String s) {
+        return api.selectAll("tickets")
+                .execute()
+                .stream()
+                .filter(result -> result.get("film").toString().equals(s))
+                .map(this::getTicket)
+                .toList();
+    }
+
+    public List<Ticket> findByUser(String s) {
+        return api.selectAll("tickets")
+                .execute()
+                .stream()
+                .filter(result -> result.get("userid").toString().equals(s))
+                .map(this::getTicket)
+                .toList();
+    }
+
     @Override
     public Ticket findById(String s) {
         return getTicket(
@@ -63,7 +81,7 @@ public class TicketRepository implements CrudRepositories<Ticket, String> {
     public void save(Ticket ticket) {
         api.insert("tickets")
                 .column("uniqueId", ticket.getUniqueId().toString())
-                .column("userId", ticket.getUniqueId().toString())
+                .column("userId", ticket.getUserId().toString())
                 .column("film", ticket.getFilm().getUniqueId().toString())
                 .column("row", ticket.getRow())
                 .column("col", ticket.getCol())
