@@ -10,21 +10,15 @@ import team.bileton.application.services.interfaces.Service;
 
 public class FilmService implements Service<FilmService, FilmRepository> {
 
-    private final FilmRepository repository = new FilmRepository();
+    private final FilmRepository repository;
+
+    public FilmService(FilmRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     public void onLoad() {
-
-        WiringAPI api = Bileton.getInstance().getDatabase().getWiringAPI();
-
-//        api.createTable("films")
-//                .column(new Column("uniqueId", "varchar(255)").primaryKey().notNull())
-//                .column(new Column("name", "varchar(255)"))
-//                .column(new Column("category", "varchar(255)"))
-//                .column(new Column("date", "timestamp"))
-//                .column(new Column("date", "text"))
-//                .execute();
-
+        repository.init();
     }
 
     @Override

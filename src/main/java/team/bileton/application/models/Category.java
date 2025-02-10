@@ -7,23 +7,23 @@ import lombok.Getter;
 @Getter
 public enum Category {
 
-    ALL("Все жанры"),
-    ACTION("Экшн"),
-    ADVENTURE("Приключения"),
-    COMEDY("Комедия"),
-    DRAMA("Драма"),
-    FANTASY("Фэнтези"),
-    HORROR("Ужасы"),
-    MYSTERY("Детектив"),
-    ROMANCE("Романтика"),
-    SCI_FI("Научная фантастика"),
-    THRILLER("Триллер"),
-    WESTERN("Вестерн"),
-    ANIMATION("Анимация"),
-    DOCUMENTARY("Документальный"),
-    CRIME("Криминал"),
-    FAMILY("Семейный"),
-    MUSIC("Музыка");
+    ALL("All Genres"),
+    ACTION("Action"),
+    ADVENTURE("Adventure"),
+    COMEDY("Comedy"),
+    DRAMA("Drama"),
+    FANTASY("Fantasy"),
+    HORROR("Horror"),
+    MYSTERY("Mystery"),
+    ROMANCE("Romance"),
+    SCI_FI("Science Fiction"),
+    THRILLER("Thriller"),
+    WESTERN("Western"),
+    ANIMATION("Animation"),
+    DOCUMENTARY("Documentary"),
+    CRIME("Crime"),
+    FAMILY("Family"),
+    MUSIC("Music");
 
     private final String name;
 }
