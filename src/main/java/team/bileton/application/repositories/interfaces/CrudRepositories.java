@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface CrudRepositories<T, K> {
 
+    void init();
+
     T findById(K k);
     List<T> findAll();
 
