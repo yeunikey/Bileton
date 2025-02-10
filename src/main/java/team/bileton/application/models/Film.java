@@ -8,6 +8,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,6 +21,11 @@ public class Film extends BObject {
     private Category category;
     private LocalDateTime date;
 
-    private Map<String, Ticket> tickets = new HashMap<>();
+    public Film(UUID uniqueId, String name, Category category, LocalDateTime date) {
+        super(uniqueId);
+        this.name = name;
+        this.category = category;
+        this.date = date;
+    }
 
 }
