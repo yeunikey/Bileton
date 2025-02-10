@@ -5,11 +5,15 @@ import team.bileton.application.services.interfaces.Service;
 
 public class TicketService implements Service<TicketService, TicketRepository> {
 
-    private final TicketRepository repository = new TicketRepository();
+    private final TicketRepository repository;
+
+    public TicketService(TicketRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     public void onLoad() {
-
+        repository.init();
     }
 
     @Override
