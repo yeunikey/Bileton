@@ -13,10 +13,10 @@ public class BiletonDatabase implements IDatabase {
         wiringAPI = new WiringAPI(
                 "org.postgresql.Driver",
                 "postgresql",
-                "34.118.52.174",
+                "host",
                 5432,
-                "yeunikey",
-                "Yerassyl0107",
+                "username",
+                "password",
                 "bileton",
                 null);
     }
